@@ -1,0 +1,24 @@
+<!-- game.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org.JugorRug">
+<head>
+    <title>Jug'o'Rug</title>
+</head>
+<body>
+    <h1>Jug'o'Rug</h1>
+
+    <form action="/play" method="post">
+        <input type="radio" id="jug" name="choice" value="Jug" checked>
+        <label for="jug">Jug</label><br>
+        <input type="radio" id="rug" name="choice" value="Rug">
+        <label for="rug">Rug</label><br>
+        <button type="submit">Place-Bet</button>
+    </form>
+
+    <p th:if="${result != null}">
+        Result: <span th:text="${result}"></span><br>
+        <span th:if="${win}">You win!</span>
+        <span th:if="${!win}">You lose!</span>
+    </p>
+</body>
+</html>
