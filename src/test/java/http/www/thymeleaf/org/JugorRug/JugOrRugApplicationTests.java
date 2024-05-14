@@ -10,4 +10,9 @@ class JugOrRugApplicationTests {
 	void contextLoads() {
 	}
 
+    @Override
+    public String toString() {
+        return "JugOrRugApplicationTests []";
+    }
+
 }
